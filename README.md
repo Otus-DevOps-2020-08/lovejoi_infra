@@ -1,4 +1,8 @@
 # lovejoi_infra
+
+testapp_IP = 84.201.135.79
+testapp_port = 9292
+
 lovejoi Infra repository
 bastion_IP = 84.201.145.123 
 someinternalhost_IP = 10.128.0.3
