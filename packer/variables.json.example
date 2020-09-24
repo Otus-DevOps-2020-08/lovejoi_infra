@@ -1,5 +1,5 @@
 {
-    "yc_service_account_key_file": "files/key.json",
+    "yc_service_account_key_file": "xxxxxxxxxxxxxxx",
     "yc_folder_id": "xxxxxxxxxxxxxxxxxxxxxxxxx",
     "source_image_family": "examples-os"
 }
