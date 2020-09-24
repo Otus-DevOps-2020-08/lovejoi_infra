@@ -7,7 +7,7 @@
             "source_image_family": "{{user `source_image_family`}}",
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
-	        "use_ipv4_nat" : "true",
+	        "use_ipv4_nat": "true",
             "ssh_username": "ubuntu",
             "platform_id": "standard-v1"
         }
@@ -15,12 +15,13 @@
     "provisioners": [
         {
             "type": "shell",
-            "script": "scriptsv/install_ruby.sh",
-            "execute_command": "sudo {{.Path}}"
+            "script": "scripts/install_ruby.sh",
+            "execute_command": "sudo {{.Path}}",
+            "pause_before": "1m"
         },
         {
             "type": "shell",
-            "script": "scriptsv/install_mongodb.sh",
+            "script": "scripts/install_mongodb.sh",
             "execute_command": "sudo {{.Path}}"
         }
     ]
