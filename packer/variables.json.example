@@ -1,5 +1,5 @@
 {
-    "yc_service_account_key_file": "xxxxxxxxxxxxxxx",
+    "yc_service_account_key_file": "/home/oleg/secrets/for_otus_yc/key.json",
     "yc_folder_id": "xxxxxxxxxxxxxxxxxxxxxxxxx",
     "source_image_family": "examples-os"
 }
