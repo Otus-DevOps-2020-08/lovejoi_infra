@@ -1,4 +1,4 @@
-service_account_key_file = "xxxxxxx_xxxxxxxxxxxxxx"
+service_account_key_file = "/home/oleg/secrets/for_otus_yc/key.json"
 cloud_id = "xxxxxxxxxxxxxxx"
 folder_id = "xxxxxxxxxxxxxxxx"
 zone = "xxxxxxxxxxx"
