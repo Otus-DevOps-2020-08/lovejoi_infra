@@ -1,0 +1,8 @@
+service_account_key_file = "xxxxxxx_xxxxxxxxxxxxxx"
+cloud_id = "xxxxxxxxxxxxxxx"
+folder_id = "xxxxxxxxxxxxxxxx"
+zone = "xxxxxxxxxxx"
+image_id = "xxxxxxxxxxxxxxx"
+subnet_id = "xxxxxxxxxxxxxxxxxxxxxxxx"
+private_key_path = "~/.ssh/appuser"
+public_key_path = "~/.ssh/appuser.pub"
