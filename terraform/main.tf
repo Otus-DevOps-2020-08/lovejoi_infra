@@ -4,6 +4,7 @@ provider "yandex" {
   folder_id                = var.folder_id
 }
 resource "yandex_compute_instance" "app" {
+  count = 1
   name = "reddit-app"
   zone = var.zone
   resources {
