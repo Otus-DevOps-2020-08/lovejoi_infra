@@ -4,7 +4,7 @@ provider "yandex" {
   folder_id                = var.folder_id
 }
 resource "yandex_compute_instance" "app" {
-  count = 1
+  count = var.app_count
   name = "reddit-app"
   zone = var.zone
   resources {
@@ -31,7 +31,7 @@ resource "yandex_compute_instance" "app" {
 
   connection {
     type  = "ssh"
-    host  = yandex_compute_instance.app[count.index].network_interface.0.nat_ip_address
+    host  = yandex_compute_instance.app.network_interface.0.nat_ip_address
     user  = "ubuntu"
     agent = false
     # путь до приватного ключа
