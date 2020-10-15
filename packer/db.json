@@ -5,7 +5,7 @@
             "service_account_key_file": "{{user `yc_service_account_key_file`}}",
             "folder_id": "{{user `yc_folder_id`}}",
             "source_image_family": "{{user `source_image_family`}}",
-            "image_name": "reddit-base-{{timestamp}}",
+            "image_name": "reddit-db-{{timestamp}}",
             "image_family": "reddit-base",
 	        "use_ipv4_nat": "true",
             "ssh_username": "ubuntu",
@@ -16,7 +16,8 @@
         {
             "type": "shell",
             "script": "scripts/install_mongodb.sh",
-            "execute_command": "sudo {{.Path}}"
+            "execute_command": "sudo {{.Path}}",
+            "pause_before": "1m"
         }
     ]
 }
