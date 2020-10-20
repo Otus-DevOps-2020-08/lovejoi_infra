@@ -16,7 +16,7 @@ resource "yandex_compute_instance" "db" {
   }
 
   network_interface {
-    subnet_id = var.subnet_id
+    subnet_id = value = yandex_vpc_subnet.app-subnet.id
     nat       = true
   }
 
