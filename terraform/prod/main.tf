@@ -4,6 +4,15 @@ provider "yandex" {
   folder_id                = var.folder_id
   zone                     = var.zone
 }
+
+module "vpc" {
+  source           = "../modules/vpc"
+  public_key_path  = var.public_key_path
+#  subnet_id        = var.subnet_id
+  private_key_path = var.private_key_path
+}
+
+
 module "app" {
   source          = "../modules/app"
   public_key_path = var.public_key_path
