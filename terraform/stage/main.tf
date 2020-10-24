@@ -5,16 +5,24 @@ provider "yandex" {
   zone                     = var.zone
 }
 
+module "vpc" {
+  source           = "../modules/vpc"
+  public_key_path  = var.public_key_path
+  private_key_path = var.private_key_path
+}
+
 module "app" {
   source          = "../modules/app"
   public_key_path = var.public_key_path
   app_disk_image  = var.app_disk_image
-  subnet_id       = modules.vpc.app-subnet
+  subnet_id       = module.vpc.redit_subnet
+  #private_key_path = var.private_key_path
 }
 
 module "db" {
   source          = "../modules/db"
   public_key_path = var.public_key_path
-  db_disk_image   = var.db_disk_image
-  subnet_id       = modules.vpc.app-subnet
+  db_disk_image   = var.db_disk_imagegit 
+  subnet_id       = module.vpc.redit_subnet
+  #private_key_path = var.private_key_path
 }
